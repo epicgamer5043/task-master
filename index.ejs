@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automation Site</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Automation Site</h1>
+    <button id="startRecording">Start Recording</button>
+    <button id="stopRecording" disabled>Stop Recording</button>
+    <div class="input-group">
+      <label for="repetitions">Repetitions:</label>
+      <input type="number" id="repetitions" value="1" min="1">
+    </div>
+    <div class="input-group">
+      <label for="interval">Interval (ms):</label>
+      <input type="number" id="interval" value="1000" min="100">
+    </div>
+    <div class="input-group">
+      <label for="xOffset">Mouse X Offset per repetition:</label>
+      <input type="number" id="xOffset" value="0">
+    </div>
+    <div class="input-group">
+      <label for="yOffset">Mouse Y Offset per repetition:</label>
+      <input type="number" id="yOffset" value="0">
+    </div>
+    <button id="startAutomation" disabled>Start Automation</button>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
