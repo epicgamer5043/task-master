@@ -8,12 +8,10 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 io.on('connection', (socket) => {
